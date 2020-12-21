@@ -49,6 +49,21 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
+
+
+function js() {
+    return src([
+        'node_modules/slick-carousel/slick/slick.js',
+        'app/js/main.min.js'
+    ])
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream());
+}
+
+
+
 function styles() {
     return src('app/scss/style.scss')
         .pipe(scss({outputStyle: 'compressed'}))
@@ -77,6 +92,7 @@ function watching() {
     watch(['app/*.html']).on('change', browserSync.reload);
 }
 
+exports.js = js;
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -86,4 +102,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(js, styles, scripts, browsersync, watching);
