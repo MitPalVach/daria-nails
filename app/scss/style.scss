@@ -128,7 +128,7 @@
 
 //          Second page
 
-.products {
+.about {
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -224,8 +224,9 @@
   &__item-1,
   &__item-3 {
     position: relative;
+
     &::before,
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       background-repeat: no-repeat;
@@ -250,6 +251,7 @@
       right: -70px;
       bottom: 155px;
     }
+
     &::after {
       width: 230px;
       height: 160px;
@@ -299,10 +301,22 @@
     @extend %comfb;
     margin-bottom: 10px;
   }
+}
 
-  &__info-text {
+//                 Fourth page
 
+.services {
+  &__inner{
+display: flex;
+    justify-content: space-between;
   }
+  &__item {
+    &-title{
+      font-size: 19px;
+      line-height: 60px;
+    }
+  }
+
 }
 
 
