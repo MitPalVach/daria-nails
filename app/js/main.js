@@ -21,6 +21,9 @@ $(function () {
         autoScrolling:true,
         scrollHorizontally: true,
         sectionSelector: '.page-section',
+        scrollOverflow: true,
+        menu: '#header__nav',
+        anchors: ['top', 'about', 'benefits', 'services', 'reviews', 'contacts'],
     });
 
 });

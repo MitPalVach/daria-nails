@@ -17,29 +17,36 @@
 
 <header class="header">
     <div class="container">
-        <div class="header__inner">
-            <a class="logo" href="#">
-                <picture class="logo__img">
-                    <source media="(max-width: 600px)" srcset="images/logo-mobile.png">
-                    <img src="images/logo.svg" alt="Daria Nails">
-                </picture>
-            </a>
+        <div id="header__nav" class="header__inner">
+            <div data-menuanchor="top">
+                <a class="logo" href="#top">
+                    <picture class="logo__img">
+                        <source media="(max-width: 600px)" srcset="images/logo-mobile.png">
+                        <img src="images/logo.svg" alt="Daria Nails">
+                    </picture>
+                </a>
+            </div>
             <nav class="menu">
+                <button class="menu__btn">
+                    <span class="menu__btn-line"></span>
+                </button>
                 <ul class="menu__list">
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Обо мне</a>
+                    <li class="menu__list-item" data-menuanchor="about">
+                        <a class="menu__list-link" href="#about">Обо мне</a>
                     </li>
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Преимущества</a>
+                    <li class="menu__list-item" data-menuanchor="benefits">
+                        <a class="menu__list-link" href="#benefits">Преимущества</a>
                     </li>
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Услуги и цены</a>
+                    <li class="menu__list-item" data-menuanchor="services">
+                        <a class="menu__list-link" href="#services">Услуги и цены</a>
                     </li>
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Отзывы</a>
+                    <li class="menu__list-item" data-menuanchor="reviews">
+                        <a class="menu__list-link" href="#reviews">Отзывы</a>
                     </li>
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="#">Контакты</a>
+                    <li class="menu__list-item" data-menuanchor="contacts">
+                        <a class="menu__list-link" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="menu__list-phone"><a class="header__phone" href="tel:89047602130">8 (904) 750 31 40</a>
                     </li>
                 </ul>
             </nav>
@@ -52,7 +59,7 @@
 </header>
 
 <main id="fullpage">
-    <section class="page-section top">
+    <section data-anchor="top" class="page-section top">
         <div class="page-section__wrapper top__wrapper">
             <div class="container">
                 <div class="top__inner">
@@ -91,7 +98,7 @@
 
     <!-- Second page -->
 
-    <section id="about" class="page-section about">
+    <section data-anchor="about" class="page-section about">
         <div class="page-section__wrapper">
             <div class="container">
                 <h3 class="title about__title">Обо мне</h3>
@@ -140,7 +147,7 @@
 
     <!-- Third page -->
 
-    <section id="benefits" class="page-section benefits">
+    <section data-anchor="benefits" class="page-section benefits">
         <div class="page-section__wrapper">
             <div class="container">
                 <h3 class="title">Преимущества</h3>
@@ -210,7 +217,7 @@
 
     <!-- Fourth page -->
 
-    <section id="services" class="page-section services">
+    <section data-anchor="services" class="page-section services">
         <div class="page-section__wrapper">
             <div class="container">
                 <h3 class="title">Услуги и цены</h3>
@@ -264,7 +271,7 @@
 
     <!-- Fifth page -->
 
-    <section id="reviews" class="page-section reviews">
+    <section data-anchor="reviews" class="page-section reviews">
         <div class="page-section__wrapper">
             <div class="container">
                 <h3 class="title">Отзывы</h3>
@@ -311,7 +318,7 @@
 
     <!-- Sixth page -->
 
-    <section id="contacts" class="page-section contacts">
+    <section data-anchor="contacts" class="page-section contacts">
         <div class="page-section__wrapper">
             <div class="container">
                 <h3 class="title">Контакты</h3>

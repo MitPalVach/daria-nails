@@ -58,6 +58,14 @@
     }
   }
 
+  &__list-phone {
+    display: none;
+  }
+
+  &__btn {
+    display: none;
+  }
+
   &__list-link:hover {
     text-decoration: overline underline;
   }
