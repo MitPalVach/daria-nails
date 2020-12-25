@@ -7,11 +7,9 @@ $(function () {
         pauseOnHover: false,
         pauseOnFocus: false,
         autoplaySpeed: 2500
-
     });
 
     $('.reviews__item-title').on('click', function () {
-
         $('.reviews__item').removeClass('reviews__item--active');
         $(this).parent().addClass('reviews__item--active');
     });
@@ -23,7 +21,17 @@ $(function () {
         sectionSelector: '.page-section',
         scrollOverflow: true,
         menu: '#header__nav',
-        anchors: ['top', 'about', 'benefits', 'services', 'reviews', 'contacts'],
+        anchors: ['top', 'about', 'benefits', 'services', 'reviews', 'contacts']
     });
+
+    $('.menu__btn').on('click', function (){
+        $('.menu__btn').toggleClass('menu__btn--active');
+        $('.menu__list').toggleClass('menu__list--active');
+        });
+
+    $('.menu__list-link').on('click', function (){
+        $('.menu__btn').removeClass('menu__btn--active');
+        $('.menu__list').removeClass('menu__list--active');
+        });
 
 });
