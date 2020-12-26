@@ -3,13 +3,13 @@
     top: 5px;
   }
   .top__title {
-    font-size: 70px;
+    font-size: 50px;
     line-height: 76px;
-    margin-top: 140px;
+    margin-top: 80px;
     margin-bottom: 25px;
   }
   .top__inner-img {
-    width: 450px;
+    width: 320px;
     display: flex;
     margin: 0;
   }
@@ -18,6 +18,40 @@
     margin: 25px 0 25px;
     max-width: 360px;
     font-size: 18px;
+  }
+  .title {
+    padding-top: 80px;
+  }
+
+  .about__slider-text {
+    left: -330px;
+
+  }
+  .about__slider-box {
+    top: -80px;
+  }
+
+  .services__item-title {
+    font-size: 15px;
+    line-height: 50px;
+  }
+
+  .reviews__item-title {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 14px 10px 14px 24px;
+
+    &:after {
+      width: 56px;
+      height: 56px;
+      right: -62px;
+    }
+  }
+  .contacts__social-item {
+    margin-top: 10px;
+  }
+  .footer {
+
   }
 
 }
@@ -33,7 +67,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0, .8);
+    background: rgba(0, 0, 0, .8);
     z-index: -1;
     display: flex;
     padding-top: 90px;
@@ -42,17 +76,19 @@
     justify-content: space-around;
     transform: translateY(-100%);
     transition: transform .5s;
+
     &--active {
       transform: translateY(0);
     }
   }
 
-  .menu__list-item+.menu__list-item {
+  .menu__list-item + .menu__list-item {
     padding-left: 0;
   }
 
   .menu__list-item {
     padding-bottom: 20px;
+
     &:first-child {
       margin-top: auto;
     }
@@ -89,14 +125,16 @@
     transition: all .7s;
   }
 
-  .menu__btn.menu__btn--active{
+  .menu__btn.menu__btn--active {
     .menu__btn-line {
       opacity: 0;
       transition: all .7s;
     }
+
     &::after {
       transform: translateY(-10px) rotate(-135deg);
     }
+
     &::before {
       transform: translateY(10px) rotate(135deg);
     }
@@ -117,6 +155,49 @@
 
   .header__btn {
     margin-right: 0;
+  }
+  .about__slider-box {
+    padding-right: 15px;
+  }
+
+  .benefits__item {
+    margin-bottom: 50px;
+  }
+
+  .benefits__item:nth-child(even) {
+    margin: 0;
+    transform: translateY(-70px);
+  }
+
+  .benefits__item-1 {
+    &::before {
+      display: none;
+    }
+  }
+
+  .benefits__item-3 {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+  .benefits__info {
+    width: 220px;
+  }
+
+
+}
+
+@media (max-width: 1100px) {
+  .about__text {
+    padding-right: 10px;
+  }
+  .about__slider-text {
+    font-size: 18px;
+    bottom: 10px;
   }
 
 }
