@@ -57,7 +57,51 @@
 }
 
 
+@media (max-width: 1300px) {
+  .benefits__item-1 {
+    &::before {
+      display: none;
+    }
+  }
+
+  .benefits__item-3 {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .header__btn {
+    margin-right: 0;
+  }
+  .about__slider-box {
+    padding-right: 15px;
+  }
+
+  .benefits__item {
+    margin-bottom: 50px;
+  }
+
+  .benefits__item:nth-child(even) {
+    margin: 0;
+    transform: translateY(-70px);
+  }
+
+  .benefits__info {
+    width: 220px;
+  }
+
+
+
+}
 @media (max-width: 1200px) {
+  .header {
+    background: rgba(0,0,0,.4);
+    top: 0;
+  }
   .menu {
     order: 1;
   }
@@ -153,55 +197,86 @@
     display: none;
   }
 
-  .header__btn {
-    margin-right: 0;
-  }
-  .about__slider-box {
-    padding-right: 15px;
-  }
-
-  .benefits__item {
-    margin-bottom: 50px;
-  }
-
-  .benefits__item:nth-child(even) {
-    margin: 0;
-    transform: translateY(-70px);
-  }
-
-  .benefits__item-1 {
-    &::before {
-      display: none;
-    }
-  }
-
-  .benefits__item-3 {
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-  .benefits__info {
-    width: 220px;
-  }
-
 
 }
 
 @media (max-width: 1100px) {
   .about__text {
     padding-right: 10px;
+    line-height: 20px;
   }
   .about__slider-text {
     font-size: 18px;
     bottom: 10px;
   }
+  .benefits__info {
+    width: 175px;
+  }
+
 
 }
 
+
+@media (max-width: 1000px) {
+  .about__inner {
+    display: block;
+    padding-left: 0;
+
+    }
+  .title {
+    padding-left: 0;
+    font-size: 30px;
+    margin-bottom: 15px;
+    line-height: 34px;
+  }
+
+
+  .about__text {
+    padding-right: 0;
+    max-width: 100%;
+    margin-bottom: 1px;
+  }
+  .about__text p {
+    margin-bottom: 10px;
+  }
+
+  .benefits__item:nth-child(even) {
+    transform: translateY(-50px);
+  }
+  .benefits__info-title {
+    font-size: 17px;
+  }
+  .benefits__info-text {
+    line-height: 18px;
+  }
+  .services__item-title {
+    font-size: 14px;
+    line-height: 36px;
+  }
+  .about__slider {
+    &::before {
+      display: none;
+    }
+  }
+  .about__slider-box {
+position: absolute;
+    margin-top: 300px;
+    right: 0;
+  }
+
+  .about__slider-text {
+
+  }
+  .about__slider-item {
+
+  }
+  .about__slider-img {
+    width: 500px;
+  }
+  .slider-btn {
+    margin-right: 200px;
+  }
+}
 
 @media (max-width: 700px) {
 
